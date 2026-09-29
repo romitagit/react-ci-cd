@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Checkout the repository
-    -name: checkout code
-     uses: actions/checkout@v3
+    - name: checkout code
+      uses: actions/checkout@v3
 
-     #setup node
+    # setup node
     - name: setup node
       uses: actions/setup-node@v3
       with:
@@ -27,7 +27,7 @@ jobs:
 
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
-     uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
